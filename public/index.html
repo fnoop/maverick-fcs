@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 
     <head>
@@ -10,7 +9,7 @@
             }
 
             .centerFlex {
-                height: 100%;
+                min-height: 100%;
                 width: 100%;
                 align-items: center;
                 display: flex;
@@ -28,25 +27,27 @@
 
     <body>
         <div class="centerFlex">
-            <div>
-                <img src="maverick-logo.svg" width=350px>
-            </div>
-            <div>
-                <hr>
-                <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
-                <script language="JavaScript">
-                    document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
-                </script>
-                <a href="/web/maverick-docs/maverick.html">Maverick Documentation</a> <br>
-                <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a> <br>
-                <hr>
-                <div class='sslupgrade'>
-                    WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
-                    <a href="sslupgrade.html">Please visit here to upgrade this website to https.</a>
-                    <hr>
+            <div class="flexOutline">
+                <div>
+                    <img src="media/maverick-logo.svg" width=350px>
                 </div>
                 <div>
-                    This is a temporary page to hold useful links to Maverick components.<br> It will be replaced by an upcoming Web UI<br>
+                    <hr>
+                    <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
+                    <script language="JavaScript">
+                        document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
+                    </script>
+                    <a href="/web/maverick-docs/maverick.html">Maverick Documentation</a> <br>
+                    <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a> <br>
+                    <hr>
+                    <div class='sslupgrade'>
+                        WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
+                        <a href="sslupgrade.html">Please visit here to upgrade this website to https.</a>
+                        <hr>
+                    </div>
+                    <div>
+                        This is a temporary page to hold useful links to Maverick components.<br> It's ugly. It will be replaced by an upcoming Web UI<br>
+                    </div>
                 </div>
             </div>
         </div>
@@ -61,4 +62,3 @@
     </script>
 
 </html>
- 
