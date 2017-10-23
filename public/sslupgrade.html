@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Maverick SSL Upgrade Instructions</title>
+        <style>
+            html {
+                background-color: #eee;
+            }
+
+            .logo {
+                align: left;
+            }
+
+            .centerFlex {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .sslupgrade {
+                display: none;
+                visibility: hidden;
+                color: #c33;
+                max-width: 600px;
+            }
+
+            .ssldone {
+                display: none;
+                visibility: hidden;
+                color: #3a3;
+                max-width: 600px;
+            }
+
+            .sslinstructions {
+                max-width: 600px;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="centerFlex">
+            <div class='logo'>
+                <img src="maverick-logo.svg" width=350px>
+            </div>
+            <div>
+                <div class='sslupgrade'>
+                    <hr> WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
+                    <hr>
+                </div>
+                <div class='ssldone'>
+                    <hr>Success: You are viewing this page through an encrypted link (https).<br> If you do not have a green padlock in the URL bar, please follow the instructions below to install the correct CA certificate.<br>
+                    <hr>
+                </div>
+                <div class='sslinstructions'>
+                    Maverick typically uses local domain/hostnames for access (eg. maverick-raspberry.local). Because of this, it is not possible to obtain public signed SSL certificates by recognised Certificate Authorities.<br> In order to facilitate
+                    encrypted communications, Maverick automatically generates cryptography certificates for this computer. To use them, you must download the CA (Certificate Authority) certificate and install it into your browser or OS so it recognises
+                    the Maverick certificates.<br>
+                    <hr>
+                    <a href="/security/mavCA.crt">Download Maverick CA Certificate</a>
+                    <hr> Installation Instructions
+                    <hr> Firefox browser recognises certificate
+                    <hr> Chrome downloads cert for OS to install
+                    <hr>
+                </div>
+            </div>
+    </body>
+
+    <script>
+        if (document.location.protocol != "https:") {
+            el = document.querySelector(".sslupgrade");
+            el.style.display = 'block';
+            el.style.visibility = 'visible';
+        }
+        else {
+            el = document.querySelector(".ssldone");
+            el.style.display = 'block';
+            el.style.visibility = 'visible';
+        }
+    </script>
+
+</html>

@@ -1,32 +1,64 @@
-<html>
-<head>
-<style>
-html {
-    background-color: #ccc;
-}
+<!DOCTYPE html>
+<html lang="en">
 
-.centerFlex {
-  height: 100%;
-  width: 100%;
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-</style>
-</head>
-<body>
-    <div class="centerFlex">
-    <div>
-        <img src="maverick-logo.svg" width=350px>
-    </div>
-    <div>
-        <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
-        <script language="JavaScript">
-            document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>' );
-        </script>
-        <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a>
-    </div>
-    </div>
-</body>
+    <head>
+        <title>Maverick Temporary Website</title>
+        <meta charset="utf-8" />
+        <style>
+            html {
+                background-color: #eee;
+            }
+
+            .centerFlex {
+                height: 100%;
+                width: 100%;
+                align-items: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+            }
+
+            .sslupgrade {
+                display: none;
+                visibility: hidden;
+                color: #c33;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="centerFlex">
+            <div>
+                <img src="maverick-logo.svg" width=350px>
+            </div>
+            <div>
+                <hr>
+                <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
+                <script language="JavaScript">
+                    document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
+                </script>
+                <a href="/web/maverick-docs/maverick.html">Maverick Documentation</a> <br>
+                <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a> <br>
+                <hr>
+                <div class='sslupgrade'>
+                    WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
+                    <a href="sslupgrade.html">Please visit here to upgrade this website to https.</a>
+                    <hr>
+                </div>
+                <div>
+                    This is a temporary page to hold useful links to Maverick components.<br> It will be replaced by an upcoming Web UI<br>
+                </div>
+            </div>
+        </div>
+    </body>
+
+    <script>
+        if (document.location.protocol != "https:") {
+            el = document.querySelector(".sslupgrade");
+            el.style.display = 'block';
+            el.style.visibility = 'visible';
+        }
+    </script>
+
 </html>
+ 
