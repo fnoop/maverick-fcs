@@ -18,7 +18,7 @@ class Userform(tornado.web.RequestHandler):
 class Upload(tornado.web.RequestHandler):
     def post(self):
         fileinfo = self.request.files['file'][0]
-        print "fileinfo is", fileinfo
+        #print "fileinfo is", fileinfo
         fname = fileinfo['filename']
         anon = self.get_argument("anon", None, False)
         if anon:
