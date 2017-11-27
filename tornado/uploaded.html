@@ -1,0 +1,38 @@
+<html lang="en">
+
+<head>
+    <title>Maverick Logfile Uploader</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+
+<body>
+    <div class="centerFlex">
+        <div class="flexOutline">
+            <div>
+                <img src="/media/maverick-logo.svg" width=350px>
+            </div>
+            <hr>
+            <div>
+                <h3>Flight Log Uploader</h1>
+
+                <form enctype="multipart/form-data" action="/analysis/uploader/upload" method="post">
+                    <input type="file" name="file" />
+                    <br>
+                    <input type="checkbox" name="anon"> Anonymize GPS Data
+                    <br>
+                    <br>
+                    <input type="submit" value="Upload" />
+                </form>
+            </div>
+            <hr>
+            <p>This facility uploads data to the Maverick analysis module.<br>
+            When a log is uploaded, it is automatically processed<br>
+            and made available in the <a href="/analysis/grafana/dashboard/db/flight-logs-index" target=_grafana>Grafana Interface</a>.</p>
+            <hr>
+            <a href="/">Return to Main Index</a>
+        </div>
+    </div>
+</body>
+
+</html>

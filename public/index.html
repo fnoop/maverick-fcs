@@ -1,58 +1,43 @@
 <html lang="en">
 
-    <head>
-        <title>Maverick Temporary Website</title>
-        <meta charset="utf-8" />
-        <style>
-            html {
-                background-color: #eee;
-            }
+<head>
+    <title>Maverick Temporary Website</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
 
-            .centerFlex {
-                min-height: 100%;
-                width: 100%;
-                align-items: center;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-            }
-
-            .sslupgrade {
-                display: none;
-                visibility: hidden;
-                color: #c33;
-            }
-        </style>
-    </head>
-
-    <body>
-        <div class="centerFlex">
-            <div class="flexOutline">
-                <div>
-                    <img src="media/maverick-logo.svg" width=350px>
-                </div>
-                <div>
-                    <hr>
-                    <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
-                    <script language="JavaScript">
-                        document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
-                    </script>
-                    <a href="/web/maverick-docs/maverick.html">Maverick Documentation</a> <br>
-                    <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a> <br>
-                    <hr>
+<body>
+    <div class="centerFlex">
+        <div class="flexOutline">
+            <div>
+                <img src="media/maverick-logo.svg" width=350px>
+            </div>
+            <div>
+                <hr>
+                <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
+                <a href="/analysis/uploader">Flight Log Uploader</a> <br>
+                <script language="JavaScript">
+                    document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
+                </script>
+                <a href="/web/maverick-docs/maverick.html">Maverick Documentation</a> <br>
+                <a href="/mavlink/mavcesium/">MAVCesium - SITL HUD Map display for MAVProxy</a> <br>
+                <!--
                     <div class='sslupgrade'>
                         WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
                         <a href="sslupgrade.html">Please visit here to upgrade this website to https.</a>
                         <hr>
                     </div>
-                    <div>
-                        This is a temporary page to hold useful links to Maverick components.<br> It's ugly. It will be replaced by an upcoming Web UI<br>
-                    </div>
+                    -->
+                <hr>
+                <div>
+                    This is a temporary page to hold useful links to Maverick components.<br> It's ugly. It will be replaced by an upcoming Web UI<br>
                 </div>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 
+<!--
     <script>
         if (document.location.protocol != "https:") {
             el = document.querySelector(".sslupgrade");
@@ -60,5 +45,6 @@
             el.style.visibility = 'visible';
         }
     </script>
+-->
 
 </html>

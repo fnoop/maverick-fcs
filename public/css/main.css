@@ -1,0 +1,18 @@
+html {
+    background-color: #eee;
+}
+
+.centerFlex {
+    min-height: 100%;
+    width: 100%;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.sslupgrade {
+    display: none;
+    visibility: hidden;
+    color: #c33;
+}
