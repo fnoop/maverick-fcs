@@ -27,7 +27,10 @@
                     <form enctype="multipart/form-data" action="/analysis/uploader/upload" method="post">
                         <input type="file" name="file" />
                         <br>
-                        <input type="checkbox" name="anon"> Anonymize GPS Data
+                        <table>
+                            <tr><td>Anonymize GPS Data</td><td><input type="checkbox" name="anon"></td></tr>
+                            <tr><td>Description</td><td><input name="description" size="32" maxlength="32"></td></tr>
+                        </table>
                         <br>
                         <br>
                         <input type="submit" value="Upload" />
