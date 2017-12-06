@@ -17,9 +17,19 @@ class Userform(tornado.web.RequestHandler):
         self.render("index.html", fname=None, _uploadDir=None)
 
 class Upload(tornado.web.RequestHandler):
+    def sanitise_file(self, filename):
+        filename = filename.replace(" ", "_")
+        return filename
+        
     def post(self):
-        fileinfo = self.request.files['file'][0]
-        filename = fileinfo['filename']
+        try:
+            fileinfo = self.request.files['file'][0]
+            filename = self.sanitise_file(fileinfo['filename'])
+        except:
+            # If no filename, skip and render upload form
+            self.render("index.html", fname=None, _uploadDir=None)
+            return
+
         anon = self.get_argument("anon", None, False)
         if anon:
             _uploadDir = anonybox
