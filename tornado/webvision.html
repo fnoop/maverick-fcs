@@ -16,9 +16,10 @@
             </div>
             <hr>
             <div>
-                <h3>Maverick WebVision</h1>
+                <h3>Maverick WebVision</h3>
+                <!-- <p>This uses the <a href='https://www.videoexpertsgroup.com/vxg-chrome-plugin/' target=_vxg>VXG Plugin</a> and requires a recent Chrome browser</p> -->
             </div>
-            <div class="vxgplayer" id="maverick_webvision_player" latency="0" url="rtsp://{{ fqdn }}:{{ port }}/video" aspect-ratio-mode="1" auto-reconnect connection-udp connection-timeout="10000" autostart controls nmf-src="/vxg/pnacl/Release/media_player.nmf" nmf-path="media_player.nmf"></div>
+            <div class="vxgplayer" id="maverick_webvision_player" latency="0" url="rtsp://{{ fqdn }}:{{ port }}/video" aspect-ratio-mode="1" auto-reconnect connection-udp autostart connection-timeout="10000" controls nmf-src="/vxg/pnacl/Release/media_player.nmf" nmf-path="media_player.nmf"></div>
             <hr>
             <a href="/">Return to Main Index</a>
         </div>
