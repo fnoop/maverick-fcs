@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Very simple file upload script, hacked on code taken from https://technobeans.com/2012/09/17/tornado-file-uploads/
 
 import tornado
@@ -54,7 +54,7 @@ class Upload(tornado.web.RequestHandler):
             conn.commit()
             conn.close()
         except Exception as e:
-            print "Meta entry exception: {}".format(repr(e))
+            print("Meta entry exception: {}".format(repr(e)))
 
         # Write the upload contents to a new file in inbox/anonybox
         fh = open(os.path.join(_uploadDir, filename), 'w')
