@@ -1,10 +1,13 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Very simple web vision script, to service vxg media plugin for vision rtsp output
 
 import tornado
 import tornado.ioloop
 import tornado.web
-import os, sys, ConfigParser, socket
+import os
+import sys
+import socket
+import configparser as ConfigParser
 
 # Define paths
 baseDir = "/srv/maverick/data/analysis/"
@@ -37,41 +40,7 @@ class Webload(tornado.web.RequestHandler):
         except:
             sys.exit(1)
         return options
-        
-class Upload(tornado.web.RequestHandler):
-    def post(self):
-        fileinfo = self.request.files['file'][0]
-        filename = fileinfo['filename']
-        anon = self.get_argument("anon", None, False)
-        if anon:
-            _uploadDir = anonybox
-        else:
-            _uploadDir = inbox
 
-        # Write an entry to the meta db
-        description = self.get_argument("description", None, False)
-        try:
-            conn = sqlite3.connect("/srv/maverick/data/analysis/mavlog-meta.db")
-            cursor = conn.cursor()
-            # See if entry already exists
-            cursor.execute("SELECT id FROM logfiles WHERE filename='"+filename+"'")
-            try:
-                id_exists = cursor.fetchone()[0]
-            except:
-                id_exists = None
-            if not id_exists:
-                cursor.execute('INSERT INTO logfiles (filename,state,description) VALUES (?,?,?)', (filename,"uploaded",description))
-            else:
-                cursor.execute('UPDATE logfiles SET start=?,state=?,description=? WHERE id=?', (filename,"uploaded",description,id_exists))
-            conn.commit()
-            conn.close()
-        except Exception as e:
-            print "Meta entry exception: {}".format(repr(e))
-
-        # Write the upload contents to a new file in inbox/anonybox
-        fh = open(os.path.join(_uploadDir, filename), 'w')
-        fh.write(fileinfo['body'])
-        self.render("index.html", fname=filename, _uploadDir=_uploadDir)
 
 application = tornado.web.Application([
         (r"/", Webload),
