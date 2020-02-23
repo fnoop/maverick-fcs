@@ -1,26 +1,58 @@
+<!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
 
-<head>
-    <title>Maverick Temporary Website</title>
-    <meta charset="utf-8" />
+    <link rel="apple-touch-icon" sizes="57x57" href="<%= BASE_URL %>apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="<%= BASE_URL %>apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="72x72" href="<%= BASE_URL %>apple-icon-72x72.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="<%= BASE_URL %>apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="<%= BASE_URL %>apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="<%= BASE_URL %>apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="144x144" href="<%= BASE_URL %>apple-icon-144x144.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="<%= BASE_URL %>apple-icon-152x152.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="<%= BASE_URL %>apple-icon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192"  href="<%= BASE_URL %>android-icon-192x192.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="<%= BASE_URL %>favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="<%= BASE_URL %>favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="<%= BASE_URL %>favicon-16x16.png">
+    <link rel="manifest" href="<%= BASE_URL %>manifest.json">
+    <meta name="msapplication-TileColor" content="#ffffff">
+    <meta name="msapplication-TileImage" content="<%= BASE_URL %>ms-icon-144x144.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <title>Maverick Web (Legacy)</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900">
     <link rel="stylesheet" type="text/css" href="css/main.css">
-</head>
-
-<body>
+  </head>
+  <body>
     <div class="centerFlex">
         <div class="flexOutline">
             <div>
-                <img src="media/maverick-logo.svg" width=350px>
+                <img src="/img/logos/goodrobots-logo-complete.svg" width=300px>
             </div>
             <div>
-                <hr>
-                <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
-                <a href="/analysis/uploader">Flight Log Uploader</a> <br>
+                <p></p>
+                <div>
+                    This is a temporary page to hold useful links to Maverick components.<br> It's ugly. It will be replaced by an upcoming Web UI<br>
+                </div>
+                <p></p>
                 <script language="JavaScript">
                     document.write('<a href="' + '//' + window.location.hostname + ':6789' + '" >Cloud9 Web IDE/Editor</a> <br>');
                 </script>
+                <p></p>
+                <a href="/analysis/grafana/">Grafana - System and Flight Analysis</a> <br>
+                <a href="/analysis/uploader">Flight Log Uploader</a> <br>
+                <p></p>
                 <a href="/mavlink/mavcesium/">MAVCesium - Live Mavlink HUD display</a> <br>
-                <a href="/web/maverick-docs/">Maverick Documentation</a> <br>
+                <p></p>
+                <a href="/web/docs/maverick">Maverick Documentation</a> <br>
+                <a href="/web/docs/px4">PX4 Documentation</a> <br>
+                <a href="/web/docs/ardupilot/ardupilot">ArduPilot Documentation</a> <br>
+                <p></p>
+                <a href="/visiond/fpv.html">Visiond FPV</a>
                 <!--
                     <div class='sslupgrade'>
                         WARNING: You are viewing an unencrypted webpage.<br> This website uses technologies that only work over an encrypted link (https).<br>
@@ -28,10 +60,6 @@
                         <hr>
                     </div>
                     -->
-                <hr>
-                <div>
-                    This is a temporary page to hold useful links to Maverick components.<br> It's ugly. It will be replaced by an upcoming Web UI<br>
-                </div>
             </div>
         </div>
     </div>
