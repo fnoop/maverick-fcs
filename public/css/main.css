@@ -16,3 +16,5 @@ html {
     visibility: hidden;
     color: #c33;
 }
+
+.error { color: red; }
